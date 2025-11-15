@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* GymHouse Color Palette */
+    --blue-soft-1: 235 88% 93%; /* #DFE3FA */
+    --blue-soft-2: 204 94% 86%; /* #BCD5FC */
+    --blue-soft-3: 193 54% 73%; /* #9BCADE */
+    --blue-primary: 217 91% 60%; /* #3B82F6 */
+    --blue-dark-1: 217 19% 27%; /* #1E293B */
+    --blue-dark-2: 225 29% 8%; /* #0C0E1A */
+    --blue-accent-1: 207 95% 32%; /* #0A4D9A */
+    --blue-accent-2: 207 100% 20%; /* #002F66 */
+    --blue-light-bg: 194 50% 84%; /* #C6E1EC */
+    --blue-dark-3: 207 91% 19%; /* #062F5C */
+    --blue-button: 207 86% 46%; /* #1C74D5 */
+    --deep-dark: 226 32% 7%; /* #0B0E18 */
+    
+    --background: 0 0% 100%;
+    --foreground: 217 19% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 217 19% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 19% 27%;
+
+    --primary: 207 86% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 235 88% 93%;
+    --secondary-foreground: 217 19% 27%;
+
+    --muted: 235 88% 93%;
+    --muted-foreground: 217 19% 27%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 235 88% 93%;
+    --input: 235 88% 93%;
+    --ring: 207 86% 46%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 225 29% 8%;
+    --foreground: 0 0% 100%;
+
+    --card: 225 29% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 225 29% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 207 86% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 19% 27%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 19% 27%;
+    --muted-foreground: 235 88% 93%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 207 86% 46%;
+    --sidebar-background: 225 29% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 207 86% 46%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 19% 27%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 217 19% 27%;
+    --sidebar-ring: 207 86% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+}

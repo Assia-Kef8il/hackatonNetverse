@@ -1,0 +1,137 @@
+.footer {
+  background: var(--color-dark-blue);
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+  
+}
+
+.footer-logo {
+  display: flex;
+  gap: 15px;
+  align-items: start;
+  margin-bottom:75px;
+}
+
+.footer-logo-icon {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  
+}
+
+.footer-qr-pattern {
+  width: 35px;
+  height: 35px;
+  background: var(--color-dark-blue);
+  border-radius: 3px;
+  position: relative;
+}
+
+.footer-qr-pattern::before,
+.footer-qr-pattern::after {
+  content: '';
+  position: absolute;
+  background: white;
+}
+
+.footer-qr-pattern::before {
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+}
+
+.footer-qr-pattern::after {
+  width: 10px;
+  height: 10px;
+  bottom: 5px;
+  right: 5px;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer-tagline {
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-yellow);
+}
+
+.footer-column a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 20px 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-links {
+    gap: 40px;
+  }
+}

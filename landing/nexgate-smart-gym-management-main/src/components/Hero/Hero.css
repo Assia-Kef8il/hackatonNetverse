@@ -1,0 +1,129 @@
+.hero {
+  background: linear-gradient(135deg, var(--color-light-blue) 0%, var(--color-pale-blue) 100%);
+  padding: 100px 0 80px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-dark-blue);
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: var(--color-navy);
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.hero-cta-text {
+  font-size: 20px;
+  color: var(--color-royal-blue);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+  padding: 15px 35px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.hero-btn-primary {
+  background: var(--color-dark-blue);
+  color: white;
+}
+
+.hero-btn-primary:hover {
+  background: var(--color-navy);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(6, 47, 91, 0.3);
+}
+
+.hero-btn-secondary {
+  background: var(--color-yellow);
+  color: var(--color-dark-blue);
+}
+
+.hero-btn-secondary:hover {
+  background: #e0b814;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(250, 204, 21, 0.3);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+}
+
+@media (max-width: 968px) {
+  .hero {
+    padding: 60px 0 50px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,122 @@
+/* Footer - Dark blue background with 3-column layout */
+.footer {
+  background: var(--blue-dark-1);
+  color: var(--white);
+  padding: 60px 100px 30px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 50px;
+}
+
+/* Column 1: Logo and slogan */
+.footer-column-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.footer-slogan {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--white);
+  opacity: 0.9;
+}
+
+/* Column 2: Navigation links */
+.footer-column-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-column-2 a {
+  color: var(--white);
+  font-size: 16px;
+  transition: color 0.3s;
+  opacity: 0.9;
+}
+
+.footer-column-2 a:hover {
+  color: var(--yellow);
+  opacity: 1;
+}
+
+/* Column 3: Contact information */
+.footer-column-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-column-3-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer-contact-icon {
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+/* Bottom copyright section */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 30px;
+  text-align: center;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 50px 60px 30px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .footer-column-1 {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-logo {
+    width: 120px;
+  }
+}

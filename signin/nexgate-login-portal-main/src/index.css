@@ -1,0 +1,48 @@
+/* NexGate Color Palette - All colors defined as CSS variables */
+:root {
+  --yellow: #F2DF3A;
+  --blue-light-1: #C2DFFC;
+  --blue-light-2: #BBDCFF;
+  --blue-med-1: #6AA4EC;
+  --blue-med-2: #3B82F6;
+  --blue-dark-1: #062F5B;
+  --blue-dark-2: #062F5C;
+  --black: #0C0C0C;
+  --white: #FFFFFF;
+}
+
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--white);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Input Base Styles */
+input {
+  font-family: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}

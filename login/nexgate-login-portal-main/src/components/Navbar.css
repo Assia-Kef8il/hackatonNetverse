@@ -1,0 +1,74 @@
+/* Navbar Styles - Light blue top navigation bar */
+.navbar {
+  background: var(--blue-light-1);
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Left section with logo and back button */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-logo {
+  height: 60px;
+  width: auto;
+}
+
+.navbar-back-arrow {
+  font-size: 32px;
+  color: var(--black);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.navbar-back-arrow:hover {
+  transform: translateX(-3px);
+}
+
+/* Right section with navigation links */
+.navbar-links {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: var(--blue-med-2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar-links {
+    gap: 25px;
+    font-size: 16px;
+  }
+
+  .navbar-logo {
+    height: 45px;
+  }
+}

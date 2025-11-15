@@ -1,0 +1,154 @@
+:root {
+  /* Assuming you have a dark blue and yellow variable */
+  --color-dark-blue: #1f2937; 
+  --color-yellow: #f59e0b;
+}
+
+.industries {
+  background: var(--color-dark-blue);
+  padding: 80px 0;
+  color: white;
+}
+
+.industries-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.industries-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 50px;
+  color: white;
+}
+
+/* --- New Slider Wrapper for 3-Card Layout --- */
+.slider-wrapper-multi {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  justify-content: center;
+  gap: 20px; /* Reduced gap between cards */
+  margin-bottom: 30px;
+}
+
+.industry-card-wrapper {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  flex-basis: 25%; /* Smaller base size for side cards */
+  max-width: 250px;
+}
+
+.main-card {
+  flex-basis: 50%; /* Larger size for the main card */
+  max-width: 400px; 
+}
+
+/* Styling the actual card content */
+.industry-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 4px solid;
+  height: 100%; /* Important for consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Style adjustments for side cards to make them appear 'secondary' */
+.side-card .industry-card {
+  opacity: 0.7; /* Dim the side cards */
+  transform: scale(0.9); /* Make side cards slightly smaller */
+}
+
+.side-card:hover {
+  transform: scale(1.02); /* Slight hover on side cards to indicate clickability */
+}
+
+/* Ensure the main card stands out */
+.main-card .industry-card {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main-card:hover .industry-card {
+  transform: scale(1.05);
+}
+
+.industry-icon {
+  width: 80px; /* Reduced size for multi-card layout */
+  height: 80px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  margin: 0 auto 15px;
+}
+
+.industry-name {
+  font-size: 20px; /* Reduced size for multi-card layout */
+  font-weight: 700;
+  color: var(--color-dark-blue);
+}
+
+.main-card .industry-name {
+  font-size: 24px; /* Larger name for the main card */
+}
+
+/* --- Dots styling remains the same --- */
+.slider-dots {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dot.active {
+  background: var(--color-yellow);
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .industries {
+    padding: 60px 0;
+  }
+
+  .industries-title {
+    font-size: 36px;
+  }
+  
+  /* On smaller screens, only show the main card */
+  .slider-wrapper-multi {
+    gap: 0;
+  }
+
+  .industry-card-wrapper {
+    display: none;
+  }
+
+  .main-card {
+    display: block;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .industry-card {
+    padding: 40px 30px;
+  }
+}
